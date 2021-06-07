@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from '../../components/header';
 
 function ListaDeGatos() {
   return (
     <div>
-      <p>Lista de Gatos</p>
+      <Header />
+      <button type="button">Lista de Gatos</button>
     </div>
   );
 }

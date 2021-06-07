@@ -9,7 +9,7 @@ describe('Header Component', () => {
     const { getByRole } = renderWithRouter(<Header />);
 
     const buttonListGats = getByRole('button', { name: /lista de gatos/i });
-    const buttonForm = getByRole('button', { name: /formulario/i });
+    const buttonForm = getByRole('button', { name: /formulário/i });
 
     expect(buttonListGats).toBeInTheDocument();
     expect(buttonForm).toBeInTheDocument();
@@ -19,12 +19,12 @@ describe('Header Component', () => {
     const { getByRole, history } = renderWithRouter(<Header />);
 
     const buttonListGats = getByRole('button', { name: /lista de gatos/i });
-    const buttonForm = getByRole('button', { name: /formulario/i });
+    const buttonForm = getByRole('button', { name: /formulário/i });
 
     expect(history.location.pathname).toBe('/');
 
     fireEvent.click(buttonForm);
-    expect(history.location.pathname).toBe('/formulario');
+    expect(history.location.pathname).toBe('/formulário');
 
     fireEvent.click(buttonListGats);
     expect(history.location.pathname).toBe('/');

@@ -6,7 +6,7 @@ import Formulario from './pages/formulario';
 function App() {
   return (
     <Switch>
-      <Route path="/formulario" component={Formulario} />
+      <Route path="/formulário" component={Formulario} />
       <Route exact path="/" component={ListaDeGatos} />
     </Switch>
   );

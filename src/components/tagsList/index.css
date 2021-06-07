@@ -1,16 +1,4 @@
-.clicavel {
-  cursor: pointer;
-}
-
-.clicavel:hover {
-  color: red;
-}
-
-.clicavel:active {
-  color: blue;
-}
-
-.test {
+.hidden {
   display: none;
 }
 
@@ -19,4 +7,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
+}
+
+.list span {
+  margin: 0.3rem;
+  border-bottom: 1px solid green;
+  width: 100%;
+  text-align: center;
+}
+
+.list span ul {
+  list-style: none;
+}
+
+.active p {
+  margin: 1rem;
 }

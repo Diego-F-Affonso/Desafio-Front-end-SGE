@@ -6,7 +6,6 @@ function Header() {
   const history = useHistory();
   return (
     <div className="container">
-      <h1>HEADER</h1>
       <button
         type="button"
         onClick={() => {

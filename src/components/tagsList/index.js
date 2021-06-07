@@ -38,7 +38,7 @@ function TagsList() {
                 const ul = currentTarget.children[0];
                 const li = ul.children[0];
                 if (li.className === 'active') {
-                  li.className = 'test';
+                  li.className = 'hidden';
                 } else {
                   li.className = 'active';
                 }
@@ -50,9 +50,9 @@ function TagsList() {
             >
               <ul>
                 {tag}
-                <li className="test">
+                <li className="hidden">
                   {catFilter.map((item) => {
-                    return <p key={item}>{item.id}</p>;
+                    return <p key={item.id}>{item.id}</p>;
                   })}
                 </li>
               </ul>

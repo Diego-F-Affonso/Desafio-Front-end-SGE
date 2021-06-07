@@ -2,6 +2,7 @@
 import React from 'react';
 import renderWithRouter from './renderWithRouter';
 import StepOneForm from '../components/stepOneForm';
+// import Formulario from '../pages/formulario';
 
 describe('Step one Form Component', () => {
   test('make sure the step has three inputs with their names', () => {

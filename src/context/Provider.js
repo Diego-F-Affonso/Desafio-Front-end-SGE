@@ -9,6 +9,7 @@ function Provider({ children }) {
 
   const fetchTags = async () => {
     const searchTags = await getApi('tags');
+    searchTags.shift();
     setTags(searchTags);
   };
 

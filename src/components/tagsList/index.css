@@ -1,0 +1,22 @@
+.clicavel {
+  cursor: pointer;
+}
+
+.clicavel:hover {
+  color: red;
+}
+
+.clicavel:active {
+  color: blue;
+}
+
+.test {
+  display: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

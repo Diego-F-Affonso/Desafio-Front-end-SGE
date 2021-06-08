@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import CatsContext from '../../context/catsContext';
 import './index.css';
 
@@ -15,31 +15,13 @@ function StepOneForm() {
     validateForms,
   } = useContext(CatsContext);
 
-  const [valid, setValid] = useState('noValid');
-  // const [validEmail, setValidEmail] = useState('noValid');
-  // const [validPassword, setValidPassword] = useState('noValid');
-
-  const validadeInfo = () => {
-    const six = 6;
-    const regex = /\S+@\S+\.\S+/;
-
-    if (
-      regex.test(email) &&
-      password.length > six &&
-      password === passwordConfirmed
-    )
-      setValid('valid');
-    // else setValid('noValid');
-  };
-
   useEffect(() => {
     validateForms();
-    validadeInfo();
   }, [email, password, passwordConfirmed]);
 
   return (
     <div className="container--stepOne">
-      <p className={valid}>Etapa selecionada: Etapa 1</p>
+      <p>Etapa selecionada: Etapa 1</p>
       <div>
         <form className="stepOne--form">
           <label htmlFor="email" className="validEmail">
@@ -52,7 +34,6 @@ function StepOneForm() {
               value={email}
               onChange={({ target }) => {
                 setEmail(target.value);
-                validadeInfo();
               }}
             />
           </label>
@@ -65,7 +46,6 @@ function StepOneForm() {
               value={password}
               onChange={({ target }) => {
                 setPassword(target.value);
-                validadeInfo();
               }}
             />
           </label>
@@ -78,7 +58,6 @@ function StepOneForm() {
               value={passwordConfirmed}
               onChange={({ target }) => {
                 setPasswordConfirmed(target.value);
-                validadeInfo();
               }}
             />
           </label>
